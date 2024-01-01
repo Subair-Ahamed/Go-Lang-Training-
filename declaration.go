@@ -16,6 +16,8 @@ func main() {
 
 	var comp1 complex128 = complex(5, 6) //type is complex
 
+	const PI = 3.14 //"const" keyword is used to declare constant values which cannot be changed
+
 	num2 := 30 //":=" type is inferred -  compiler decides the type of variable
 
 	/*---Declaring Multiple values---*/
@@ -37,5 +39,7 @@ func main() {
 	fmt.Printf("\nValues of a,b,c are %v, %f, %s", a, b, c)
 
 	fmt.Println("\nAdd of 2 numbers are ", num1+num2) //Println is used to print the direct value
+
+	fmt.Println("The value of PI is ", PI)
 
 }
