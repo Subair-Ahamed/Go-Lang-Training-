@@ -21,7 +21,7 @@ func main() {
 		fmt.Println(err1)
 	}
 
-	err2 := divide(4, 3)
+	err2 := divide(4, 0)
 
 	if err2 != nil {
 		fmt.Printf("error: %s", err2)
