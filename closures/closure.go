@@ -16,6 +16,7 @@ func greet() func() {
 	name := "raju"
 	return func() {
 		fmt.Println("Hi", name)
+
 	}
 }
 
