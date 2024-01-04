@@ -16,6 +16,7 @@ func main() {
 
 	fmt.Printf("The joined string is %v\n", joinstr("This", "is", "go", "lang"))
 
+	//func as parameter:
 	sqr := func(i int) int {
 		return i * i
 	}
