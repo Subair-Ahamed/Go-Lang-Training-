@@ -19,7 +19,8 @@ func main() {
 	fmt.Printf("Task completed after sleeping for %d seconds\n",s)
 
     //Log:
-	logger := log.New(os.Stdout,"INFO:",log.Ldate|log.Ltime) //log.New() to create a logger that writes to standard output (STDOUT) with the prefix INFO with date or time.
+	//log.New() to create a logger that writes to standard output (STDOUT) with the prefix INFO with date or time.
+	logger := log.New(os.Stdout,"INFO:",log.Ldate|log.Ltime) 
 
 	// Print to the default logger
 	logger.Print("This is a log message")
