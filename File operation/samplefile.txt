@@ -1,0 +1,1 @@
+Golang file creating, writing and reading
