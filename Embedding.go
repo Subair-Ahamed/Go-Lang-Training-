@@ -41,7 +41,7 @@ func (e Employee) getValue(){
 }
 
 func main(){
-	emp := Employee{}
+	emp := Employee{} //we can access the company struct insdie the employee struct
 	emp.setValue()
 	emp.getValue()
 

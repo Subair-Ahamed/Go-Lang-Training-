@@ -4,7 +4,7 @@ import "fmt"
 
 type Celsius float32
 
-func (c Celsius) ToFahrenheit() float32 { //method syntax : func (receiver type) method_name(arguments) return type{}
+func (c Celsius) ToFahrenheit() float32 { //method syntax : func (receiver with type) method_name(arguments) return type{}
 
 	fahren := 9.0/5.0*c + 32
 	return float32(fahren)
