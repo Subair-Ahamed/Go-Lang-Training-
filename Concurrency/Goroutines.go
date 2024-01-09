@@ -1,4 +1,4 @@
-//Goroutines are used for concurrent programming
+//Goroutines are used for concurrent and asynchronous programming
 package main
 
 import (
