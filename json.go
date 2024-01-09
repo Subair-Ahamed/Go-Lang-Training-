@@ -9,8 +9,8 @@ func main(){
 
     type Human struct{
 		Name string `json:"name"` //prints name in the json format
-		Age int
-		Job string
+		Age int `json:"age"`
+		Job string `json:"job"`
 	}
 
 	inp1 := Human{"Prakash",23,"Engineer"}
@@ -19,12 +19,12 @@ func main(){
 	if err != nil{
 		fmt.Println(err)
 	}
-	fmt.Println(string(data1)) //since it is in byte format, we have to type convert.
+	fmt.Println(string(data1)) //since it returns a byte format, we have to type convert it to string.
 
-	inp2 := `{"Name":"Ahamed","Age":22,"Job":"AI"}` //backtick must
+	inp2 := []byte(`{"Name":"Ahamed","Age":22,"Job":"AI"}`) //backtick must
 	data2 := &Human{} 
 
-	err1 := json.Unmarshal([]byte(inp2),data2) // decoding into byte format (syntax: json.Unmarshal(data []byte, v interface{}) error) --> returning error.
+	err1 := json.Unmarshal(inp2,data2)   //decoding - taking byte format as argument (syntax: json.Unmarshal(data []byte, v interface{}) error) --> returning error.
 	if err1 != nil{
 		fmt.Println(err1)
 	}
