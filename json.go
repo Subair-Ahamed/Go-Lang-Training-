@@ -24,7 +24,11 @@ func main(){
 	inp2 := []byte(`{"Name":"Ahamed","Age":22,"Job":"AI"}`) //backtick must
 	data2 := &Human{} 
 
+<<<<<<< HEAD
 	err1 := json.Unmarshal(inp2,data2) // decoding - taking byte format as argument (syntax: json.Unmarshal(data []byte, v interface{}) error) --> returning error.
+=======
+	err1 := json.Unmarshal(inp2,data2)   //decoding - taking byte format as argument (syntax: json.Unmarshal(data []byte, v interface{}) error) --> returning error.
+>>>>>>> origin/main
 	if err1 != nil{
 		fmt.Println(err1)
 	}
