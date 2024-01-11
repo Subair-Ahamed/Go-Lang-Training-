@@ -10,15 +10,15 @@ func employee(ctx context.Context){ //Content interface is the core of context p
 
 	for {
 		select{
-			case <- ctx.Done():  //ctx.Done() is to get the channel that is closed when the context is cancelled
+			case <- ctx.Done():        //ctx.Done() is to get the channel that is closed when the context is cancelled
 			    fmt.Println("Context Cancelled...!")
-                return
+                            return
 
-	       default:
+	                default:
 			    fmt.Println("Employee performing some task")
-				time.Sleep(1 * time.Second)
-	    }
-    }
+			    time.Sleep(1 * time.Second)
+	              }
+            }      
 }
 
 func main(){
@@ -28,5 +28,4 @@ func main(){
 
 	go employee(ctx)
 	time.Sleep(5 * time.Second)
-
 }
