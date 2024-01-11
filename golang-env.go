@@ -31,15 +31,15 @@ func main() {
         } else {
             fmt.Printf("%s=%s\n", key, val)
         }
-    }
-    getEnv("EDITOR") //not set
-    getEnv("SHELL") //prints the value
+        }
+        getEnv("EDITOR") //not set
+        getEnv("SHELL") //prints the value
     
 	//os.ExpandEnv:
 	os.Setenv("EDITOR", "emacs")
 	expand := os.ExpandEnv("My editor is $EDITOR.") //replaces the '$var' inside a string into the value of the given variable
-    fmt.Println(expand)       
-    fmt.Println(os.ExpandEnv("My shell is $SHELL."))
+        fmt.Println(expand)       
+        fmt.Println(os.ExpandEnv("My shell is $SHELL."))
 
 	//Example-1:
 	var a string
