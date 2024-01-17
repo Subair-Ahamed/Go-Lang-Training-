@@ -9,7 +9,7 @@ func main(){
 
 	//'http.HandleFunc' is a simpler way to register handlers using functions instead of objects.
 
-	http.HandleFunc("/",greet) //syntax : http.HandleFunc(string pattern, func(wr snippet))
+	http.HandleFunc("/",greet) //syntax : http.HandleFunc(string address pattern, func_name(wr snippet))
 
 	http.HandleFunc("/bye",sendoff)
 

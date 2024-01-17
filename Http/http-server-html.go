@@ -30,5 +30,5 @@ func settype(w http.ResponseWriter, r *http.Request){ //w is the response and r 
 
 func sendoff(w http.ResponseWriter, r *http.Request){
 
-	http.ServeFile(w,r,"bye.html") //to display a file
+	http.ServeFile(w,r,"bye.html") //ServeFile - to display a file
 }
