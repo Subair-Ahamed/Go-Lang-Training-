@@ -5,36 +5,24 @@ import (
 	"sync"
 )
 
-type DatabaseConnection struct {
-	// Assume some database connection details
-	connected bool
-}
+var wg sync.WaitGroup
 
-var dbInstance *DatabaseConnection
-var dbOnce sync.Once
+var once sync.Once
 
-func initializeDatabase() {
-	// Simulate expensive database initialization
-	fmt.Println("Initializing the database...")
-	// Code for connecting to the database goes here
-	// ...
-	dbInstance = &DatabaseConnection{connected: true}
-}
-
-func getDatabaseInstance() *DatabaseConnection {
-	dbOnce.Do(initializeDatabase)
-	return dbInstance
+func load() {
+	fmt.Println("Run the block only once")
 }
 
 func main() {
-	// Multiple goroutines calling getDatabaseInstance, but initializeDatabase will be executed only once.
-	for i := 0; i < 3; i++ {
+
+	wg.Add(10)
+	for i := 0; i < 10; i++ {
 		go func() {
-			db := getDatabaseInstance()
-			fmt.Printf("Database connected: %v\n", db.connected)
+			defer wg.Done()
+			once.Do(load)
+			//once - An object that will perform exactly one action.
+			//do - Executes the function load exactly once, regardless of how many times Do is called across multiple goroutines.
 		}()
 	}
-
-	// Sleep to allow goroutines to complete before program exit
-	select {}
+	wg.Wait()
 }
