@@ -6,7 +6,7 @@ import (
 )
 
 func errorhandler(w http.ResponseWriter, r *http.Request) {
-	http.Error(w, "Error message....!", http.StatusInternalServerError)
+	http.Error(w, "Error message....!", http.StatusInternalServerError) //shows the internal server error
 }
 func main() {
 
