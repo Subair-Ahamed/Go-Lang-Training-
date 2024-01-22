@@ -8,7 +8,9 @@ import (
 )
 
 func main() {
-	conn, err := net.Dial("tcp", "sample.com:80") //syntax: Dial(network, address string) (Conn, error)
+
+	//Dial, DialTCP, DialUDP: functions to establish network connections
+	conn, err := net.Dial("tcp", "sample.com:8080") //syntax: Dial(network, address string) (Conn, error)
 	if err != nil {
 		fmt.Println("Dial error:", err)
 		return

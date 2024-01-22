@@ -1,4 +1,4 @@
-//Listens for incoming connections on the local network address. It returns a Listener interface and an error.
+//Listens for incoming connections on the local network address. It returns a Listener interface and an error. establishes a listener to the connection.
 
 package main
 
